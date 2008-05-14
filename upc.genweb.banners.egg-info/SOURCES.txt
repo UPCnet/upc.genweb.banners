@@ -1,0 +1,14 @@
+README.txt
+setup.cfg
+setup.py
+upc/__init__.py
+upc.genweb.banners.egg-info/PKG-INFO
+upc.genweb.banners.egg-info/SOURCES.txt
+upc.genweb.banners.egg-info/dependency_links.txt
+upc.genweb.banners.egg-info/entry_points.txt
+upc.genweb.banners.egg-info/namespace_packages.txt
+upc.genweb.banners.egg-info/not-zip-safe
+upc.genweb.banners.egg-info/requires.txt
+upc.genweb.banners.egg-info/top_level.txt
+upc/genweb/__init__.py
+upc/genweb/banners/__init__.py
