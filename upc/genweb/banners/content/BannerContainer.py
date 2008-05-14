@@ -19,7 +19,7 @@ import interfaces
 from Products.ATContentTypes.content.folder import ATFolder
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
-from Products.upc_genweb_banners.config import *
+from upc.genweb.banners.config import *
 
 ##code-section module-header #fill in your manual code here
 ##/code-section module-header

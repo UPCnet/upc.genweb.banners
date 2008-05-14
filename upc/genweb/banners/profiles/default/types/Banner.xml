@@ -7,7 +7,7 @@
  <property name="description"></property>
  <property name="content_icon">Banner.gif</property>
  <property name="content_meta_type">Banner</property>
- <property name="product">upc_genweb_banners</property>
+ <property name="product">upc.genweb.banners</property>
  <property name="factory">addBanner</property>
  <property name="immediate_view">base_view</property>
  <property name="global_allow">False</property>

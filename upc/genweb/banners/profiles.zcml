@@ -1,7 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="upc_genweb_banners">
+    i18n_domain="upc.genweb.banners">
 
   <include package="Products.GenericSetup" file="meta.zcml" />
 
@@ -10,7 +10,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="genweb UPC banners"
+      title="genweb UPC Banners"
       directory="profiles/default"
       description="Extension profile for genweb UPC banners."
       provides="Products.GenericSetup.interfaces.EXTENSION"

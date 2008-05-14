@@ -19,7 +19,7 @@ import interfaces
 
 from Products.CMFDynamicViewFTI.browserdefault import BrowserDefaultMixin
 
-from Products.upc_genweb_banners.config import *
+from upc.genweb.banners.config import *
 
 ##code-section module-header #fill in your manual code here
 ##/code-section module-header
@@ -30,8 +30,8 @@ schema = Schema((
         name='Imatge',
         widget=ImageField._properties['widget'](
             label='Imatge',
-            label_msgid='upc_genweb_banners_label_Imatge',
-            i18n_domain='upc_genweb_banners',
+            label_msgid='upc.genweb.banners_label_Imatge',
+            i18n_domain='upc.genweb.banners',
         ),
         storage=AttributeStorage(),
     ),
@@ -39,16 +39,16 @@ schema = Schema((
         name='URLdesti',
         widget=StringField._properties['widget'](
             label='Urldesti',
-            label_msgid='upc_genweb_banners_label_URLdesti',
-            i18n_domain='upc_genweb_banners',
+            label_msgid='upc.genweb.banners_label_URLdesti',
+            i18n_domain='upc.genweb.banners',
         ),
     ),
     BooleanField(
         name='Obrirennovafinestra',
         widget=BooleanField._properties['widget'](
             label='Obrirennovafinestra',
-            label_msgid='upc_genweb_banners_label_Obrirennovafinestra',
-            i18n_domain='upc_genweb_banners',
+            label_msgid='upc.genweb.banners_label_Obrirennovafinestra',
+            i18n_domain='upc.genweb.banners',
         ),
     ),
 ),

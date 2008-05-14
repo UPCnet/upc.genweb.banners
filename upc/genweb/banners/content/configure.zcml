@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="upc.genweb.banners">
+
+    <!-- configure your content components here -->
+
+    <!-- -*- extra stuff goes here -*- -->
+
+    <class class=".BannerContainer.BannerContainer">
+        <require
+            permission="zope2.View"
+            interface=".interfaces.IBannerContainer"
+            />
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema=".interfaces.IBannerContainer"
+            />
+    </class>
+
+    <class class=".Banner.Banner">
+        <require
+            permission="zope2.View"
+            interface=".interfaces.IBanner"
+            />
+        <require
+            permission="cmf.ModifyPortalContent"
+            set_schema=".interfaces.IBanner"
+            />
+    </class>
+
+</configure>

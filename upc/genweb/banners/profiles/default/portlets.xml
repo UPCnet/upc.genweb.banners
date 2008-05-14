@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- This file is used to register new types of portlets. It can also
+     be used to register completely new column types. See CMFPlone's version
+     of this file for more information.
+  -->
+<portlets>
+
+    <portlet
+       addview="upc.genweb.banners.portlet"
+       title="Banners portlet"
+       description="A portlet which can show site banners."
+       />
+       
+</portlets>
