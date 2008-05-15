@@ -1,1 +1,1 @@
-msgfmt -o locales/ca/LC_MESSAGES/upcgenwebbanners.mo locales/ca/LC_MESSAGES/upcgenwebbanners.po
+msgfmt -o locales/ca/LC_MESSAGES/upc.genweb.banners.mo locales/ca/LC_MESSAGES/upc.genweb.banners.po
