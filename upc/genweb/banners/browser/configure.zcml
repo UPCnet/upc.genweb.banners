@@ -4,11 +4,11 @@
     i18n_domain="upc.genweb.banners">
 
     <browser:resource
-        name="banner.gif"
+        name="Banner.gif"
         file="Banner.gif"
         />
     <browser:resource
-        name="banner.gif"
+        name="BannerContainer.gif"
         file="BannerContainer.gif"
         />        
 </configure>
