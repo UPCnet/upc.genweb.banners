@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="upc.genweb.banners">
+
+    <browser:resource
+        name="banner.gif"
+        file="Banner.gif"
+        />
+    <browser:resource
+        name="banner.gif"
+        file="BannerContainer.gif"
+        />        
+</configure>
