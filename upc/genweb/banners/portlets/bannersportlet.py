@@ -37,6 +37,13 @@ class IBannersPortlet(IPortletDataProvider):
                        required=True,
                        default=5)
 
+    state = schema.Tuple(title=_(u"Workflow state"),
+                         description=_(u"Items in which workflow state to show."),
+                         default=('published', ),
+                         required=True,
+                         value_type=schema.Choice(
+                             vocabulary="plone.app.vocabularies.WorkflowStates")
+                         )
 
 class Assignment(base.Assignment):
     """Portlet assignment.
@@ -55,9 +62,10 @@ class Assignment(base.Assignment):
     # def __init__(self, some_field=u""):
     #    self.some_field = some_field
 
-    def __init__(self, count=5):
+    def __init__(self, count=5, state=('published', )):
         self.count = count
-
+        self.state = state
+        
     @property
     def title(self):
         """This property is used to give the title of the portlet in the
@@ -82,9 +90,9 @@ class Renderer(base.Renderer):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         limit = self.data.count
-#        state = self.data.state
+        state = self.data.state
         return catalog(portal_type='Banner',
-                       review_state='published',
+                       review_state=state,
                        sort_limit=limit)[:limit]
 
     def test(self, value, trueVal, falseVal):
@@ -111,7 +119,7 @@ class AddForm(base.AddForm):
     description = _(u"This portlet displays the site banners.")
 
     def create(self, data):
-        return Assignment(count=data.get('count', 5))
+        return Assignment(count=data.get('count', 5), state=data.get('state', ('published',)))
 
 
 # NOTE: IF this portlet does not have any configurable parameters, you can
