@@ -2,24 +2,24 @@
 # unknown <unknown>, 2007.
 msgid ""
 msgstr ""
-"Project-Id-Version: siteBanners\n"
-"POT-Creation-Date: Thu Aug 23 13:34:13 2007\n"
-"PO-Revision-Date: Thu Aug 23 13:34:13 2007\n"
-"Last-Translator: unknown <unknown>\n"
-"Language-Team: unknown <unknown>\n"
+"Project-Id-Version: upc.genweb.banners\n"
+"POT-Creation-Date: 2008-05-15 15:06+0000\n"
+"PO-Revision-Date: 2008-05-15 15:06+0000\n"
+"Last-Translator: Plone Team @ UPCnet <plone.team@upcnet.es>\n"
+"Language-Team: Plone Team @ UPCnet <plone.team@upcnet.es>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: ca\n"
+"Language-Name: Catala\n"
 "Preferred-Encodings: latin1 utf-8\n"
 "Domain: upc.genweb.banners\n"
 
 #. Default: "Imatge"
 #: content/Banner.py
 msgid "upc.genweb.banners_label_Imatge"
-msgstr "Imatge"
+msgstr "Banner"
 
 #. Default: "Obrirennovafinestra"
 #: content/Banner.py
