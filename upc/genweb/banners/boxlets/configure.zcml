@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="upc.genweb.banners">
+
+    <browser:page
+        for="*"
+        name="box.Banners"
+        class=".boxletsviews.banners"
+        permission="zope2.View"
+        />
+
+</configure>
