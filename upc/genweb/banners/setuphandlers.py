@@ -8,8 +8,14 @@ def setupVarious(context):
     if context.readDataFile('upc.genweb.banners_various.txt') is None:
         return
     
-    from Products.CMFPlone.utils import _createObjectByType
+    from Products.CMFPlone.utils import _createObjectByType, getToolByName
     portal = context.getSite()
-        
+    
+    workflowTool = getToolByName(portal, "portal_workflow")
+            
     if not getattr(portal,'banners',False):
         _createObjectByType('BannerContainer', portal, 'banners')  
+        portal['banners'].setExcludeFromNav(True)
+        portal['banners'].setTitle('Banners')
+        portal['banners'].reindexObject()
+        workflowTool.doActionFor(portal.banners, "publish")
