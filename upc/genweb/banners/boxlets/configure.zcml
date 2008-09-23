@@ -5,7 +5,7 @@
 
     <browser:page
         for="*"
-        name="box.Banners"
+        name="box.Banners_mini"
         class=".boxletsviews.banners"
         permission="zope2.View"
         />
