@@ -15,7 +15,13 @@ class banners(BrowserView, banners_render):
         catalog = getToolByName(context, 'portal_catalog')
         limit = 5
         state = 'published'
-        return catalog(portal_type='Banner',
+        banner_container = catalog.searchResults(portal_type='BannerContainer',
+                                                 review_state='published')
+        if banner_container:
+            return catalog(portal_type='Banner',
                        review_state=state,
+                       path=banner_container[0].getPath(),
                        sort_limit=limit)[:limit]
+        else:
+            return []
     
