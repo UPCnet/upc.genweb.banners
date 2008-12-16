@@ -39,7 +39,9 @@ schema = Schema((
         name='URLdesti',
         widget=StringField._properties['widget'](
             label='Urldesti',
+            description="Comença la url per http:// si vols enllaçar fora del teu espai.",            
             label_msgid='upc.genweb.banners_label_URLdesti',
+            description_msgid='upc.genweb.banners_help_descripcion',            
             i18n_domain='upc.genweb.banners',
         ),
     ),
