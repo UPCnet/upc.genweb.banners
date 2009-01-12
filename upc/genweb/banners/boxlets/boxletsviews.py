@@ -14,9 +14,9 @@ class banners(BrowserView, banners_render):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         limit = 5
-        state = 'published'
+        state = ['published','intranet']
         banner_container = catalog.searchResults(portal_type='BannerContainer',
-                                                 review_state='published')
+                                                 review_state=state)
         if banner_container:
             return catalog(portal_type='Banner',
                        review_state=state,

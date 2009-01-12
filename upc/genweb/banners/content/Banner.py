@@ -29,7 +29,7 @@ schema = Schema((
     ImageField(
         name='Imatge',
         widget=ImageField._properties['widget'](
-            label='Imatge',
+            label='Image',
             label_msgid='upc.genweb.banners_label_Imatge',
             i18n_domain='upc.genweb.banners',
         ),
@@ -39,7 +39,7 @@ schema = Schema((
         name='URLdesti',
         widget=StringField._properties['widget'](
             label='Urldesti',
-            description="Comença la url per http:// si vols enllaçar fora del teu espai.",            
+            description="You must include http:// at the beginning to make an external link",            
             label_msgid='upc.genweb.banners_label_URLdesti',
             description_msgid='upc.genweb.banners_help_descripcion',            
             i18n_domain='upc.genweb.banners',
@@ -48,7 +48,7 @@ schema = Schema((
     BooleanField(
         name='Obrirennovafinestra',
         widget=BooleanField._properties['widget'](
-            label='Obrirennovafinestra',
+            label='Open in a new window',
             label_msgid='upc.genweb.banners_label_Obrirennovafinestra',
             i18n_domain='upc.genweb.banners',
         ),

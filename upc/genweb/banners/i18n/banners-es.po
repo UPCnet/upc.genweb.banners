@@ -1,0 +1,38 @@
+# Plone Team @ UPCnet <plone.team@upcnet.es>, 2007
+msgid ""
+msgstr ""
+"Project-Id-Version: upc.genweb.banners\n"
+"POT-Creation-Date: Mon Jan 12 14:00:00 2009\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Víctor Fernández de Alba <victor.fernandez@upcnet.es>\n"
+"Language-Team: UPCnet Plone Team <plone.team@upcnet.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: es\n"
+"Language-Name: Spanish\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: upc.genweb.banners\n"
+
+#. Default: "Imatge"
+#: content/Banner.py
+msgid "upc.genweb.banners_label_Imatge"
+msgstr "Banner"
+
+#. Default: "Obrirennovafinestra"
+#: content/Banner.py
+msgid "upc.genweb.banners_label_Obrirennovafinestra"
+msgstr "Abrir en una ventana nueva?"
+
+#. Default: "Url"
+#: content/Banner.py
+msgid "upc.genweb.banners_label_URLdesti"
+msgstr "URL de destino"
+
+#. Default: "Url"
+#: content/Banner.py
+msgid "upc.genweb.banners_help_descripcion"
+msgstr "Empieza la URL con http:// si quieres enlazar con un elemento fuera de tu sitio web."
+
+

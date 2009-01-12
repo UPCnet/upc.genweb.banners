@@ -1,5 +1,5 @@
 # archgenxml generated POT File
-# unknown <unknown>, 2007.
+# Plone Team @ UPCnet <plone.team@upcnet.es>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: upc.genweb.banners\n"
@@ -30,3 +30,8 @@ msgstr "Obrir en una nova finestra?"
 #: content/Banner.py
 msgid "upc.genweb.banners_label_URLdesti"
 msgstr "URL de destí"
+
+#. Default: "Url"
+#: content/Banner.py
+msgid "upc.genweb.banners_help_descripcion"
+msgstr "Comença la url per http:// si vols enllaçar fora del teu espai."
