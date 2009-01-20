@@ -9,7 +9,10 @@ from upc.genweb.banners.portlets.bannersportlet import Renderer as banners_rende
 
 class banners(BrowserView, banners_render):
     __call__ = ViewPageTemplateFile('banners.pt')
-    
+
+    def getBanners(self):
+        return self._data()
+            
     def _data(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
