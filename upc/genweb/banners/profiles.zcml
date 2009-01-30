@@ -10,7 +10,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="genWeb UPC Banners"
+      title="Genweb UPC Banners"
       directory="profiles/default"
       description="Extension profile for genweb UPC banners."
       provides="Products.GenericSetup.interfaces.EXTENSION"
