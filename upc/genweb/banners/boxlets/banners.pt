@@ -1,6 +1,6 @@
 <div id="baner" i18n:domain="upc.genweb.banners">
 
-<tal tal:define="sections view/getBanners">
+<tal:block tal:define="sections view/getBanners">
 
 <tal:items tal:repeat="section sections"> 
  <tal:item tal:define="obj python:section.getObject()">
@@ -9,6 +9,6 @@
          </a>
  </tal:item>
 </tal:items>
-</tal>
+</tal:block>
   
 </div>
