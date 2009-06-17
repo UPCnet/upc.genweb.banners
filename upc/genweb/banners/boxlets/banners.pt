@@ -1,4 +1,4 @@
-<div id="baner" i18n:domain="upc.genweb.banners">
+<div id="baners" i18n:domain="upc.genweb.banners">
 	<h2 class="goout">Bàners</h2>             
 	<ul>
 		<tal:block tal:define="sections view/getBanners">
