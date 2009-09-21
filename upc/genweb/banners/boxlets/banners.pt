@@ -1,14 +1,14 @@
-<div id="baners" i18n:domain="upc.genweb.banners">
-	<h2 class="goout">Bàners</h2>             
-	<ul>
-		<tal:block tal:define="sections view/getBanners">
-			<li tal:repeat="section sections">
- 				<tal:item tal:define="obj python:section.getObject()">
-	         			<a tal:attributes="href obj/URLdesti">
-	         		 	<img tal:replace="structure python:obj.Imatge.tag()" src="" alt="" />
-			        	</a>
-        			</tal:item>
-			</li>
-	        </tal:block>
-	</ul>  
-</div>
+<tal:block tal:define="sections view/getBanners" condition="sections">
+	<div id="baners" i18n:domain="upc.genweb.banners">
+		<h2 class="goout">Bàners</h2>             
+		<ul>
+				<li tal:repeat="section sections">
+	 				<tal:item tal:define="obj python:section.getObject()">
+		         			<a tal:attributes="href obj/URLdesti">
+		         		 	<img tal:replace="structure python:obj.Imatge.tag()" src="" alt="" />
+				        	</a>
+	        			</tal:item>
+				</li>
+		</ul>  
+	</div>
+</tal:block>
