@@ -35,4 +35,5 @@ msgstr "URL de destino"
 msgid "upc.genweb.banners_help_descripcion"
 msgstr "Empieza la URL con http:// si quieres enlazar con un elemento fuera de tu sitio web."
 
-
+msgid "baners"
+msgstr "Banners"

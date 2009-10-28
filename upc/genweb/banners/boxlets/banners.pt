@@ -1,6 +1,6 @@
 <tal:block tal:define="sections view/getBanners" condition="sections">
 	<div id="baners" i18n:domain="upc.genweb.banners">
-		<h2 class="goout">Bàners</h2>             
+		<h2 class="goout" i18n:translate="baners">Banners</h2>             
 		<ul>
 				<li tal:repeat="section sections">
 	 				<tal:item tal:define="obj python:section.getObject()">
