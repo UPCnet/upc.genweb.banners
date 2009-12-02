@@ -4,7 +4,7 @@
 		<ul>
 				<li tal:repeat="section sections">
 	 				<tal:item tal:define="obj python:section.getObject()">
-		         			<a tal:attributes="href obj/URLdesti">
+		         			<a tal:attributes="href obj/URLdesti; target python:view.test(obj.Obrirennovafinestra,'newwindow','_self')">
 		         		 	<img tal:replace="structure python:obj.Imatge.tag()" src="" alt="" />
 				        	</a>
 	        			</tal:item>
