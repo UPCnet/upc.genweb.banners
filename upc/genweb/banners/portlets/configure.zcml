@@ -16,7 +16,6 @@
          interface=".bannersportlet.IBannersPortlet"
          assignment=".bannersportlet.Assignment"
          view_permission="zope2.View"
-         edit_permission="cmf.ManagePortal"
          renderer=".bannersportlet.Renderer"
          addview=".bannersportlet.AddForm"
          editview=".bannersportlet.EditForm"
