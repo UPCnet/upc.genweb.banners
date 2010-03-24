@@ -10,7 +10,7 @@
           the EditForm declaration in simpletaskportlet.py and delete
           the 'editview' attribute from this statement.
        -->
-
+<include package="plone.app.portlets" />
      <plone:portlet
          name="upc.genweb.banners.portlet"
          interface=".bannersportlet.IBannersPortlet"
