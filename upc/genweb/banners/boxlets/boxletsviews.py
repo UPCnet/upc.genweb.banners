@@ -29,3 +29,19 @@ class banners(BrowserView, banners_render):
         else:
             return []
     
+    def getAltAndTitle(self, altortitle):
+        """Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
+           el literal Obriu l'enllaç en una finestra nova
+        """
+        lt = getToolByName(self, 'portal_languages')
+        idioma = lt.getPreferredLanguage()
+        str = ''
+        if idioma == 'ca':
+            str = "Obriu l'enllaç en una finestra nova"
+        if idioma == 'es':
+            str = "Abre en ventana nueva"
+        if idioma == 'en':
+            str = "Open in new window"
+        if str == '':
+            str = "Obriu l'enllaç en una finestra nova"
+        return altortitle + ', ' + str

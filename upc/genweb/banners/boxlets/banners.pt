@@ -1,13 +1,17 @@
 <tal:block tal:define="sections view/getBanners" condition="sections">
 	<div id="baners" i18n:domain="upc.genweb.banners">
-		<h2 class="goout" i18n:translate="baners">Banners</h2>             
+		<h2 class="goout" i18n:translate="baners">Banners</h2>
 		<ul>
 				<li tal:repeat="section sections">
 	 				<tal:item tal:define="obj python:section.getObject()">
-		         			<a tal:attributes="href obj/URLdesti; target python:obj.Obrirennovafinestra and '_blank' or nothing">
-		         		 	<img tal:replace="structure python:obj.Imatge.tag()" src="" alt="" />
+		         			<a tal:attributes="href obj/URLdesti;
+		         			                   target python:obj.Obrirennovafinestra and '_blank' or nothing;
+		         			                   title python:view.getAltAndTitle(obj.Title())">
+		         		 	<img tal:attributes="src string:${obj/absolute_url}/Imatge;
+		         		 	                     alt python:view.getAltAndTitle(obj.Title());
+		         		 	                     title python:view.getAltAndTitle(obj.Title()) " />
 				        	</a>
-	        			</tal:item>
+	        	    </tal:item>
 				</li>
 		</ul>  
 	</div>
