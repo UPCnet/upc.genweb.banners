@@ -118,13 +118,13 @@ class Renderer(base.Renderer):
         idioma = lt.getPreferredLanguage()
         str = ''
         if idioma == 'ca':
-            str = "Obriu l'enllaç en una finestra nova"
+            str = "(obriu en una finestra nova)"
         if idioma == 'es':
-            str = "Abre en ventana nueva"
+            str = "(abre en ventana nueva)"
         if idioma == 'en':
-            str = "Open in new window"
+            str = "(open in new window)"
         if str == '':
-            str = "Obriu l'enllaç en una finestra nova"
+            str = "(obriu en una finestra nova)"
         return altortitle + ', ' + str
     
 # NOTE: If this portlet does not have any configurable parameters, you can
