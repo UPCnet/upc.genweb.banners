@@ -3,16 +3,17 @@
 		<h2 class="goout" i18n:translate="baners">Banners</h2>
 		<ul>
 				<li tal:repeat="section sections">
-	 				<tal:item tal:define="obj python:section.getObject()">
+	 				<tal:item tal:define="obj python:section.getObject()">	 				
 		         			<a tal:attributes="href obj/URLdesti;
-		         			                   target python:obj.Obrirennovafinestra and '_blank' or nothing;
-		         			                   title python:view.getAltAndTitle(obj.Title())">
+		         			                   target python:obj.Obrirennovafinestra and '_blank' or nothing;		         			                   
+		         			                   title python:obj.Obrirennovafinestra and view.getAltAndTitle(obj.Title()) or obj.Title()">						
+		         			                   						
 		         		 	<img tal:attributes="src string:${obj/absolute_url}/Imatge;
-		         		 	                     alt python:view.getAltAndTitle(obj.Title());
-		         		 	                     title python:view.getAltAndTitle(obj.Title()) " />
+		         		 	                     alt python:obj.Obrirennovafinestra and view.getAltAndTitle(obj.Title()) or obj.Title();
+		         		 	                     title python:obj.Obrirennovafinestra and view.getAltAndTitle(obj.Title()) or obj.Title() " />
 				        	</a>
 	        	    </tal:item>
-				</li>
+				</li>				
 		</ul>  
 	</div>
 </tal:block>
