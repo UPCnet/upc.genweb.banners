@@ -1,8 +1,15 @@
 Changelog
 =========
 
-0.1 - Unreleased
-----------------
+1.3 (2010-10-19)
+------------------
+* Plone 4 ready implementation
+* z3c.autoinclude ready
 
-* Initial release
+1.2 1st semester 2010
+---------------------
+
+* Initial release valid for this UPCnet services (Web UPC, Genweb)
+* Accessible proof
+* Boxlet and portlet
 

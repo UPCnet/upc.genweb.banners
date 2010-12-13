@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from zope.interface import Interface
 
 from zope.interface import implements
@@ -112,7 +113,7 @@ class Renderer(base.Renderer):
 
     def getAltAndTitle(self, altortitle):
         """Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
-           el literal Obriu l'enllaç en una finestra nova
+           el literal Obriu l'enllac en una finestra nova
         """
         lt = getToolByName(self, 'portal_languages')
         idioma = lt.getPreferredLanguage()

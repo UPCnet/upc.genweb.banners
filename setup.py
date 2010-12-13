@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.2'
+version = '1.3'
 
 setup(name='upc.genweb.banners',
       version=version,
@@ -28,5 +28,7 @@ setup(name='upc.genweb.banners',
       ],
       entry_points="""
       # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
       )

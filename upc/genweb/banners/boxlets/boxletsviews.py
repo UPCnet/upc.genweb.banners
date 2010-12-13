@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter
@@ -31,7 +32,7 @@ class banners(BrowserView, banners_render):
     
     def getAltAndTitle(self, altortitle):
         """Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
-           el literal Obriu l'enllaç en una finestra nova
+           el literal Obriu l'enllac en una finestra nova
         """
         lt = getToolByName(self, 'portal_languages')
         idioma = lt.getPreferredLanguage()

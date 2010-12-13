@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def setupVarious(context):
 
     # Ordinarily, GenericSetup handlers check for the existence of XML files.
@@ -8,7 +9,7 @@ def setupVarious(context):
     if context.readDataFile('upc.genweb.banners_various.txt') is None:
         return
 #
-#    la creació de continguts s'ha centralitzat al paquet upc.genwebupc, per fer-la language-aware
+#    la creacio de continguts s'ha centralitzat al paquet upc.genwebupc, per fer-la language-aware
 #
 #    from Products.CMFPlone.utils import _createObjectByType, getToolByName
 #    portal = context.getSite()

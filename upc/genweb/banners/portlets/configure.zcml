@@ -4,12 +4,6 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="upc.genweb.banners">
 
-     <!-- Register the portlet -->
-
-     <!-- If the portlet has no configurable parameters, you can remove
-          the EditForm declaration in simpletaskportlet.py and delete
-          the 'editview' attribute from this statement.
-       -->
 <include package="plone.app.portlets" />
      <plone:portlet
          name="upc.genweb.banners.portlet"
