@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.3'
+version = '1.4'
 
 setup(name='upc.genweb.banners',
       version=version,
@@ -25,6 +25,7 @@ setup(name='upc.genweb.banners',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'archetypes.configure',
       ],
       entry_points="""
       # -*- Entry points: -*-

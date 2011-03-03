@@ -1,20 +1,30 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser"
            xmlns:i18n="http://namespaces.zope.org/i18n"  
-           xmlns:five="http://namespaces.zope.org/five">
+           xmlns:five="http://namespaces.zope.org/five"
+           xmlns:at="http://namespaces.plone.org/archetypes">
 
   <five:registerPackage package="." initialize=".initialize" />
-    
-  <include package=".content" />
+
   <include package=".portlets" />
   <include package=".browser" />
   <include package=".boxlets" />
-    
+
+  <permission id="BannerContainer.Add" title="Banners: Add Banner Container" />
+  <permission id="Banner.Add" title="Banners: Add Banner" />
+  
+  <at:register
+       class=".content.Banner.Banner"
+       permission="Banner.Add"
+       />
+
+   <at:register
+        class=".content.BannerContainer.BannerContainer"
+        permission="BannerContainer.Add"
+        />       
+
   <!-- <i18n:registerTranslations directory="locales" /> -->
   
   <include file="profiles.zcml" />
-  
-  <!-- ##code-section configure.zcml -->
-  <!-- ##/code-section configure.zcml -->
 
 </configure>
