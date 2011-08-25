@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
 <import-steps>
- <import-step id="upc.genweb.banners.various"
+<!-- Ja que no fem res amb el setuphandlers, el elimino com a step -->
+<!--  <import-step id="upc.genweb.banners.various"
                version="20080811-01"
                handler="upc.genweb.banners.setuphandlers.setupVarious"
                title="genWeb UPC Banners: miscellaneous import steps">
     <dependency step="types" />
     Various import steps that are not handled by GS import/export
     handlers.
- </import-step>  
+ </import-step>   -->
 </import-steps>
