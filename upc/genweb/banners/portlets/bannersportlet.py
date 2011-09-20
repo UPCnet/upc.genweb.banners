@@ -98,6 +98,7 @@ class Renderer(base.Renderer):
             return catalog(portal_type='Banner',
                        review_state=state,
                        path=banner_container[0].getPath(),
+                       sort_on='getObjPositionInParent',
                        sort_limit=limit)[:limit]
         else:
             return []
