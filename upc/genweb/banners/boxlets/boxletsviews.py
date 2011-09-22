@@ -8,17 +8,18 @@ from Products.CMFCore.utils import getToolByName
 
 from upc.genweb.banners.portlets.bannersportlet import Renderer as banners_render
 
+
 class banners(BrowserView, banners_render):
     __call__ = ViewPageTemplateFile('banners.pt')
 
     def getBanners(self):
         return self._data()
-            
+
     def _data(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         limit = 5
-        state = ['published','intranet']
+        state = ['published', 'intranet']
         banner_container = catalog.searchResults(portal_type='BannerContainer',
                                                  review_state=state)
         if banner_container:
@@ -29,7 +30,7 @@ class banners(BrowserView, banners_render):
                        sort_limit=limit)[:limit]
         else:
             return []
-    
+
     def getAltAndTitle(self, altortitle):
         """Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
            el literal Obriu l'enllac en una finestra nova

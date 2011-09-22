@@ -39,9 +39,9 @@ schema = Schema((
         name='URLdesti',
         widget=StringField._properties['widget'](
             label='Urldesti',
-            description="You must include http:// at the beginning to make an external link",            
+            description="You must include http:// at the beginning to make an external link",
             label_msgid='upc.genweb.banners_label_URLdesti',
-            description_msgid='upc.genweb.banners_help_descripcion',            
+            description_msgid='upc.genweb.banners_help_descripcion',
             i18n_domain='upc.genweb.banners',
         ),
     ),
@@ -62,8 +62,10 @@ schema = Schema((
 Banner_schema = BaseSchema.copy() + \
     schema.copy()
 
+
 ##code-section after-schema #fill in your manual code here
 ##/code-section after-schema
+
 
 class Banner(BaseContent, BrowserDefaultMixin):
     """
@@ -86,6 +88,3 @@ registerType(Banner, PROJECTNAME)
 
 ##code-section module-footer #fill in your manual code here
 ##/code-section module-footer
-
-
-

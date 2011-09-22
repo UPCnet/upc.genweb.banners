@@ -16,6 +16,7 @@ from Products.CMFCore.utils import getToolByName
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('upc.genweb.banners')
 
+
 class IBannersPortlet(IPortletDataProvider):
     """A portlet
 
@@ -46,6 +47,7 @@ class IBannersPortlet(IPortletDataProvider):
                              vocabulary="plone.app.vocabularies.WorkflowStates")
                          )
 
+
 class Assignment(base.Assignment):
     """Portlet assignment.
 
@@ -66,13 +68,14 @@ class Assignment(base.Assignment):
     def __init__(self, count=5, state=('published', )):
         self.count = count
         self.state = state
-        
+
     @property
     def title(self):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
         return _(u"Banners Portlet")
+
 
 class Renderer(base.Renderer):
     """Portlet renderer.
@@ -86,7 +89,7 @@ class Renderer(base.Renderer):
 
     def getBanners(self):
         return self._data()
-    
+
     def _data(self):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
@@ -128,9 +131,11 @@ class Renderer(base.Renderer):
         if str == '':
             str = "(obriu en una finestra nova)"
         return altortitle + ', ' + str
-    
+
+
 # NOTE: If this portlet does not have any configurable parameters, you can
 # inherit from NullAddForm and remove the form_fields variable.
+
 
 class AddForm(base.AddForm):
     """Portlet add form.
