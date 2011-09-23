@@ -1,0 +1,41 @@
+# archgenxml generated POT File
+# Plone Team @ UPCnet <plone.team@upcnet.es>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: upc.genweb.banners\n"
+"POT-Creation-Date: 2008-05-15 15:06+0000\n"
+"PO-Revision-Date: 2011-09-23 11:05+0100\n"
+"Last-Translator: Ariel von Barnekow <ariel.von.barnekow@upcnet.es>\n"
+"Language-Team: Plone Team @ UPCnet <plone.team@upcnet.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: upc.genweb.banners\n"
+
+#. Default: "Imatge"
+#: content/Banner.py
+msgid "upc.genweb.banners_label_Imatge"
+msgstr "Banner"
+
+#. Default: "Obrirennovafinestra"
+#: content/Banner.py
+msgid "upc.genweb.banners_label_Obrirennovafinestra"
+msgstr "Open in a new window?"
+
+#. Default: "Url"
+#: content/Banner.py
+msgid "upc.genweb.banners_label_URLdesti"
+msgstr "Destination URL"
+
+#. Default: "Url"
+#: content/Banner.py
+msgid "upc.genweb.banners_help_descripcion"
+msgstr "You must include http:// at the beginning to make an external link"
+
+msgid "baners"
+msgstr "Banners"
+

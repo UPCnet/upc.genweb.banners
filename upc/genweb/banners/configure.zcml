@@ -10,7 +10,7 @@
   <include package=".browser" />
   <include package=".boxlets" />
     
-  <!-- <i18n:registerTranslations directory="locales" /> -->
+  <i18n:registerTranslations directory="locales" />
   
   <include file="profiles.zcml" />
   
