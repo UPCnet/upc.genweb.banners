@@ -14,6 +14,7 @@ __docformat__ = 'plaintext'
 
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes.atapi import *
+from Products.ATContentTypes.content import base
 from zope.interface import implements
 import interfaces
 
@@ -67,7 +68,7 @@ Banner_schema = BaseSchema.copy() + \
 ##/code-section after-schema
 
 
-class Banner(BaseContent, BrowserDefaultMixin):
+class Banner(base.ATCTContent, BrowserDefaultMixin):
     """
     """
     security = ClassSecurityInfo()

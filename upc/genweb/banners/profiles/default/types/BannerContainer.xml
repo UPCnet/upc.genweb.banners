@@ -9,16 +9,19 @@
  <property name="content_meta_type">BannerContainer</property>
  <property name="product">upc.genweb.banners</property>
  <property name="factory">addBannerContainer</property>
- <property name="immediate_view">folder_summary_view</property>
+ <property name="immediate_view">atct_edit</property>
  <property name="global_allow">False</property>
  <property name="filter_content_types">True</property>
  <property name="allowed_content_types">
    <element value="Banner"/>
  </property>
  <property name="allow_discussion">False</property>
- <property name="default_view">folder_summary_view</property>
+ <property name="default_view">folder_listing</property>
  <property name="view_methods">
   <element value="folder_summary_view"/>
+  <element value="folder_tabular_view"/>
+  <element value="atct_album_view"/>
+  <element value="folder_listing"/>
  </property>
  <property name="default_view_fallback">False</property>
  <alias from="(Default)" to="(dynamic view)"/>
@@ -33,12 +36,8 @@
          visible="True">
   <permission value="Modify portal content"/>
  </action>
- <action title="View" 
-         action_id="view"
-         category="object" 
-         condition_expr="python:1"
-         url_expr="string:${object_url}" 
-         visible="True">
+ <action title="View" action_id="view" category="object" condition_expr=""
+    url_expr="string:${object_url}/view" visible="True">
   <permission value="View"/>
  </action>
 </object>
