@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.4'
+version = '1.5'
 
 setup(name='upc.genweb.banners',
       version=version,
@@ -14,9 +14,9 @@ setup(name='upc.genweb.banners',
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='',
-      author='PloneTeam@UPCnet',
+      author='UPCnet Plone Team',
       author_email='plone.team@upcnet.es',
-      url='https://devel.upcnet.es/svn/genwebupc/trunk/upc.genweb.banners',
+      url='https://github.com/upcnet/upc.genweb.banners',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['upc', 'upc.genweb'],

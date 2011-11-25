@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.5 (2011-11-25)
+----------------
+* Genweb 4.1 ready
+
 1.4 (2011-09-21)
 ----------------
 * Fixed: portlet order
@@ -14,7 +18,6 @@ Changelog
 
 1.2 1st semester 2010
 ---------------------
-
 * Initial release valid for this UPCnet services (Web UPC, Genweb)
 * Accessible proof
 * Boxlet and portlet
