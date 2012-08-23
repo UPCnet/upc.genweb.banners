@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.6 (unreleased)
+-----------------
+* ZCML cleansing
+
 1.5 (2011-11-25)
 ----------------
 * Genweb 4.1 ready
