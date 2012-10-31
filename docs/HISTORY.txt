@@ -4,6 +4,7 @@ Changelog
 1.6 (unreleased)
 -----------------
 * ZCML cleansing
+* New unified fields for catalog metadata
 
 1.5 (2011-11-25)
 ----------------
