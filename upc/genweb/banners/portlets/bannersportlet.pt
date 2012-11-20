@@ -1,18 +1,20 @@
-<tal:block tal:define="sections view/getBanners" condition="sections">
-    <div id="baners" i18n:domain="upc.genweb.banners">
-        <h2 class="goout" i18n:translate="baners">Banners</h2>             
+<!-- XXX GW4.2 Revisar HTML -->
+<tal:banners define="banners view/getBanners"
+             i18n:domain="upc.genweb.banners">
+<aside id="banners"
+       tal:condition="banners">
+        <h2 class="goout" i18n:translate="baners">Banners</h2>
         <ul>
-                <li tal:repeat="section sections">
-                    <tal:item tal:define="obj python:section.getObject()">
-                            <a tal:attributes="href obj/URLdesti;
-                                               target python:obj.Obrirennovafinestra and '_blank' or nothing;
-                                               title python:view.getAltAndTitle(obj.Title())">
-                            <img tal:attributes="src string:${obj/absolute_url}/Imatge;
-                                                 alt python:view.getAltAndTitle(obj.Title());
-                                                 title python:view.getAltAndTitle(obj.Title()) " />
-                            </a>
-                        </tal:item>
-                </li>
-        </ul>  
-    </div>
-</tal:block>
+            <li tal:repeat="banner banners">
+                <a tal:define="target python:banner.obrirEnFinestraNova and '_blank' or None"
+                   tal:attributes="href banner/URLdesti;
+                                   target target | nothing;
+                                   title python:view.getAltAndTitle(banner.Title)">
+                <img tal:attributes="src string:${banner/getURL}/Imatge;
+                                    alt python:view.getAltAndTitle(banner.Title);
+                                    title python:view.getAltAndTitle(banner.Title) " />
+                </a>
+            </li>
+        </ul>
+</aside>
+</tal:banners>

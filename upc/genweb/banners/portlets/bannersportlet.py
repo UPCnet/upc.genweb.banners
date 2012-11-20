@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from zope.interface import Interface
-
 from zope.interface import implements
+from zope.app.component.hooks import getSite
 
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
@@ -25,27 +25,21 @@ class IBannersPortlet(IPortletDataProvider):
     same.
     """
 
-    # TODO: Add any zope.schema fields here to capture portlet configuration
-    # information. Alternatively, if there are no settings, leave this as an
-    # empty interface - see also notes around the add form and edit form
-    # below.
-
-    # some_field = schema.TextLine(title=_(u"Some field"),
-    #                              description=_(u"A field to use"),
-    #                              required=True)
-
     count = schema.Int(title=_(u'Number of banners to display'),
                        description=_(u'How many banners to list.'),
                        required=True,
-                       default=5)
+                       default=5,
+                       min=5,
+                       max=7)
 
-    state = schema.Tuple(title=_(u"Workflow state"),
-                         description=_(u"Items in which workflow state to show."),
-                         default=('published', ),
-                         required=True,
-                         value_type=schema.Choice(
-                             vocabulary="plone.app.vocabularies.WorkflowStates")
-                         )
+    # GW4.2 Fridge
+    # state = schema.Tuple(title=_(u"Workflow state"),
+    #                      description=_(u"Items in which workflow state to show."),
+    #                      default=('published', ),
+    #                      required=True,
+    #                      value_type=schema.Choice(
+    #                          vocabulary="plone.app.vocabularies.WorkflowStates")
+    #                      )
 
 
 class Assignment(base.Assignment):
@@ -57,24 +51,16 @@ class Assignment(base.Assignment):
 
     implements(IBannersPortlet)
 
-    # TODO: Set default values for the configurable parameters here
-
-    # some_field = u""
-
-    # TODO: Add keyword parameters for configurable parameters here
-    # def __init__(self, some_field=u""):
-    #    self.some_field = some_field
-
     def __init__(self, count=5, state=('published', )):
         self.count = count
-        self.state = state
+        # self.state = state
 
     @property
     def title(self):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return _(u"Banners Portlet")
+        return _(u"Genweb banners")
 
 
 class Renderer(base.Renderer):
@@ -87,54 +73,27 @@ class Renderer(base.Renderer):
 
     render = ViewPageTemplateFile('bannersportlet.pt')
 
+    def portal_url(self):
+        return self.portal().absolute_url()
+
+    def portal(self):
+        return getSite()
+
     def getBanners(self):
-        return self._data()
-
-    def _data(self):
-        context = aq_inner(self.context)
-        catalog = getToolByName(context, 'portal_catalog')
+        catalog = getToolByName(self.portal(), 'portal_catalog')
         limit = self.data.count
-        state = self.data.state
-        banner_container = catalog.searchResults(portal_type='BannerContainer',
-                                                 review_state='published')
-        if banner_container:
-            return catalog(portal_type='Banner',
-                       review_state=state,
-                       path=banner_container[0].getPath(),
-                       sort_on='getObjPositionInParent',
-                       sort_limit=limit)[:limit]
-        else:
-            return []
-
-    def test(self, value, trueVal, falseVal):
-        """
-            helper method, mainly for setting html attributes.
-        """
-        if value:
-            return trueVal
-        else:
-            return falseVal
+        # state = self.data.state
+        return catalog.searchResults(portal_type='Banner',
+                                     review_state=['published', 'intranet'],
+                                     sort_on='getObjPositionInParent',
+                                     sort_limit=limit)[:limit]
 
     def getAltAndTitle(self, altortitle):
-        """Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
-           el literal Obriu l'enllac en una finestra nova
+        """ Funcio que extreu idioma actiu i afegeix al alt i al title de les imatges del banner
+            el literal Obriu l'enllac en una finestra nova.
         """
-        lt = getToolByName(self, 'portal_languages')
-        idioma = lt.getPreferredLanguage()
-        str = ''
-        if idioma == 'ca':
-            str = "(obriu en una finestra nova)"
-        if idioma == 'es':
-            str = "(abre en ventana nueva)"
-        if idioma == 'en':
-            str = "(open in new window)"
-        if str == '':
-            str = "(obriu en una finestra nova)"
-        return altortitle + ', ' + str
-
-
-# NOTE: If this portlet does not have any configurable parameters, you can
-# inherit from NullAddForm and remove the form_fields variable.
+        return '%s, %s' % (altortitle,
+            self.portal().translate(_('obrir_link_finestra_nova', default=u"(obriu en una finestra nova)")))
 
 
 class AddForm(base.AddForm):
@@ -151,10 +110,6 @@ class AddForm(base.AddForm):
     def create(self, data):
         return Assignment(count=data.get('count', 5), state=data.get('state', ('published',)))
 
-
-# NOTE: IF this portlet does not have any configurable parameters, you can
-# remove this class definition and delete the editview attribute from the
-# <plone:portlet /> registration in configure.zcml
 
 class EditForm(base.EditForm):
     """Portlet edit form.

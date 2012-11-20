@@ -15,6 +15,9 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: upc.genweb.banners\n"
 
+msgid "obrir_link_finestra_nova"
+msgstr "(abre en ventana nueva)"
+
 #. Default: "Imatge"
 #: content/Banner.py
 msgid "upc.genweb.banners_label_Imatge"

@@ -5,7 +5,7 @@ version = '1.6'
 
 setup(name='upc.genweb.banners',
       version=version,
-      description="",
+      description="A custom content type (image with a follow link) and a related portlet.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
@@ -22,9 +22,9 @@ setup(name='upc.genweb.banners',
       namespace_packages=['upc', 'upc.genweb'],
       include_package_data=True,
       zip_safe=False,
+      extras_require={'test': ['plone.app.testing']},
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
       ],
       entry_points="""
       # -*- Entry points: -*-
