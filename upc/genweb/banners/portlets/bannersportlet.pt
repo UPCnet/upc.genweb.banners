@@ -2,9 +2,9 @@
 <tal:banners define="banners view/getBanners"
              i18n:domain="upc.genweb.banners">
 <aside id="banners"
-       tal:condition="banners">
+       tal:condition="banners" class="portlet portlet-baners">
         <h2 class="goout" i18n:translate="baners">Banners</h2>
-        <ul>
+        <ul class="unstyled">
             <li tal:repeat="banner banners">
                 <a tal:define="target python:banner.obrirEnFinestraNova and '_blank' or None"
                    tal:attributes="href banner/URLdesti;
