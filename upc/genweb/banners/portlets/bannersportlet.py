@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from zope.interface import Interface
 from zope.interface import implements
-from zope.app.component.hooks import getSite
+from zope.component.hooks import getSite
 
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
