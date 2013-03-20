@@ -8,9 +8,8 @@
             <li tal:repeat="banner banners" role="listitem">
                 <a tal:define="target python:banner.obrirEnFinestraNova and '_blank' or None"
                    tal:attributes="href banner/URLdesti;
-                                   target target | nothing;
-                                   title python:view.getAltAndTitle(banner.Title)">
-                  <img tal:attributes="src string:${banner/getURL}/Imatge;
+                                   target target | nothing">
+                  <img rel="tooltip" tal:attributes="src string:${banner/getURL}/Imatge;
                                     alt python:view.getAltAndTitle(banner.Title);
                                     title python:view.getAltAndTitle(banner.Title) " />
                 </a>

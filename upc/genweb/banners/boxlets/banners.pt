@@ -8,7 +8,7 @@
 		         			                   target python:obj.Obrirennovafinestra and '_blank' or nothing;		         			                   
 		         			                   title python:obj.Obrirennovafinestra and view.getAltAndTitle(obj.Title()) or obj.Title()">						
 		         			                   						
-		         		 	<img tal:attributes="src string:${obj/absolute_url}/Imatge;
+		         		 		<img tal:attributes="src string:${obj/absolute_url}/Imatge;
 		         		 	                     alt python:obj.Obrirennovafinestra and view.getAltAndTitle(obj.Title()) or obj.Title();
 		         		 	                     title python:obj.Obrirennovafinestra and view.getAltAndTitle(obj.Title()) or obj.Title() " />
 				        	</a>
