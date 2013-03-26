@@ -11,7 +11,7 @@
                                    target target | nothing">
                   <img rel="tooltip" tal:attributes="src string:${banner/getURL}/Imatge;
                                     alt python:view.getAltAndTitle(banner.Title);
-                                    title python:view.getAltAndTitle(banner.Title) " />
+                                    title python:view.getAltAndTitle(banner.Title)" />
                 </a>
             </li>
         </ul>
