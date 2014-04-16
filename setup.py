@@ -3,11 +3,13 @@ import os
 
 version = '1.6'
 
+README = open("README.rst").read()
+HISTORY = open(os.path.join("docs", "HISTORY.rst")).read()
+
 setup(name='upc.genweb.banners',
       version=version,
       description="A custom content type (image with a follow link) and a related portlet.",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=README + "\n" + HISTORY,
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Programming Language :: Python",

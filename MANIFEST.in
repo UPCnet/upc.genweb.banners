@@ -1,0 +1,4 @@
+recursive-include vilaix *
+recursive-include docs *
+include *
+global-exclude *.pyc
