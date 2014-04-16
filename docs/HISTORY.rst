@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.6.1 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
 1.6 (2014-04-16)
 ----------------
  * Genweb 4.3 ready
