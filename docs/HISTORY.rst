@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.6 (unreleased)
------------------
+1.6 (2014-04-16)
+----------------
  * Genweb 4.3 ready
  * ZCML cleansing
  * New unified fields for catalog metadata
