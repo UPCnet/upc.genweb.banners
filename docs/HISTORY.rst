@@ -1,17 +1,15 @@
 Changelog
 =========
 
-1.6.2 (unreleased)
+1.6.2 (2016-04-21)
 ------------------
 
-- Nothing changed yet.
-
+* Update boxletsviews.py show 7 banners instead 5 [Alberto Duran]
 
 1.6.1 (2014-04-16)
 ------------------
 
-- Nothing changed yet.
-
+* Fix Manifest
 
 1.6 (2014-04-16)
 ----------------
